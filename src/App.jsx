@@ -109,9 +109,12 @@ function App() {
         </form>
 
         {list.length > 0 && (
+          // this is done so it wont display the tasks when it is empty
           <div className={dark ? "items-dark" : "items"}>
             {list.map((item) => {
+              // i am checking the list array with the map
               const { id, title } = item;
+              // and here  i am destructuring the contents of the array so i can use it
               return (
                 <article className="item" key={id}>
                   <p className="title" onClick={() => editItem(id)}>
