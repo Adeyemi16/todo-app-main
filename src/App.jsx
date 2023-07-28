@@ -16,7 +16,7 @@ const getLocalStorage = () => {
   }
 };
 function App() {
-  const [dark, setdark] = useState(false);
+  const [dark, setdark] = useState(true);
   const [click, setClick] = useState(false);
   const [name, setName] = useState("");
   const [isEditing, setIsEditing] = useState(false);
