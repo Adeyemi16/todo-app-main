@@ -1,0 +1,323 @@
+:root{
+  /* ### Primary */
+   --Bright-Blue: hsl(220, 98%, 61%);
+   --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+   /* ### Neutral */
+   /* ### Light Theme */
+   --Very-Light-Gray-light: hsl(0, 0%, 98%);
+   --Very-Light-Grayish-Blue-light: hsl(236, 33%, 92%);
+   --Light-Grayish-Blue-light: hsl(233, 11%, 84%);
+   --Dark-Grayish-Blue-light: hsl(236, 9%, 61%);
+   --Very-Dark-Grayish-Blue-light: hsl(235, 19%, 35%);
+    /* ### Dark Theme */
+   --Very-Dark-Blue-dark: hsl(235, 21%, 11%);
+   --Very-Dark-Desaturated-Blue-dark: hsl(235, 24%, 19%);
+   --Light-Grayish-Blue-dark-dark: hsl(234, 39%, 85%);
+   --Light-Grayish-Blue-hover-dark: hsl(236, 33%, 92%);
+   --Dark-Grayish-Blue-dark: hsl(234, 11%, 52%);
+   --Very-Dark-Grayish-Blue-dark: hsl(233, 14%, 35%);
+   --Very-Dark-Grayish-Blue-dark: hsl(237, 14%, 26%)
+}
+
+
+@font-face {
+  font-family: normal;
+  src: url(../public/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: light;
+  src: url(../public/fonts/Poppins-Light.ttf);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  background-color: white;
+  min-height: 100vh;
+  display: grid;
+  flex-direction: column;
+  transition: .5s;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+}
+.body-dark{
+   background-color: var(--Very-Dark-Blue-dark);
+   min-height: 100vh;
+   display: grid;
+    flex-direction: column;
+    transition: .5s;
+    box-sizing: border-box;
+    padding-bottom: 2rem;
+}
+.nav-dark{
+  background-image: url(../public/images/bg-desktop-dark.jpg);
+    height: 12rem;
+    padding-top: 2rem;
+    box-sizing: border-box;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: .5s;
+    /* width: 37vw; */
+}
+
+.nav-light{
+  background-image: url(../public/images/bg-desktop-light.jpg);
+  height: 12rem;
+  padding-top: 2rem;
+  box-sizing: border-box;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: .5s;
+}
+p{
+  margin: 0;
+}
+
+h3{
+  font-family: normal;
+  font-size: xx-large;
+  color: white;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.toggle:hover{
+  cursor: pointer;
+
+}
+
+.todo{
+  position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    width: 37vw;
+    height: auto;
+    justify-content: space-between;
+    gap: 1rem;
+    top: 6rem;
+}
+
+.items{ 
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: .2rem;
+  height: auto;
+  justify-content: center;
+  background-color: white;
+  transition: .5s;
+  border-color: black;
+  padding: .2rem;
+  border-style: solid;
+  border-color: var(--Very-Dark-Grayish-Blue-light);
+  border-width: thin;
+  border-radius: .5rem;
+}
+
+.itemsb{
+  font-family: normal;
+  font-size: small;
+  color: rgb(158, 154, 154);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0.4rem;
+  height: 2rem;
+}
+
+.clear{
+  cursor: pointer;
+}
+
+.clearDark{
+  cursor: pointer;
+}
+
+.clear:hover{
+  transition: .2s;
+  color: black;
+}
+
+.clearDark:hover {
+  transition: .2s;
+  color: black;
+}
+
+.items-dark{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: .2rem;
+  height: auto;
+  justify-content: center;
+  background-color: var(--Very-Dark-Desaturated-Blue-dark);
+  transition: .5s;
+  border-color: black;
+  padding: .2rem;
+  border-style: solid;
+  border-color: var(--Very-Dark-Grayish-Blue-light);
+  border-width: thin;
+  color: var(--Light-Grayish-Blue-light);
+  border-radius: .5rem;
+}
+
+.item{
+  width: 100%;
+  padding: .4rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: var(--Dark-Grayish-Blue-dark);
+  height: 3rem;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.title{
+  font-family: normal;
+  font-size: medium;
+  font-weight: 500;
+  margin: 0;
+  font-size: larger;
+  width: 80%;
+}
+
+.titleCancel{
+  font-family: normal;
+  font-size: medium;
+  font-weight: 500;
+  margin: 0;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+}
+
+.form{
+  /* position: absolute; */
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height:2.9rem;
+  border-radius: 0.4rem;
+  padding: 0.2rem;
+  transition: .5s;
+}
+
+.form-dark {
+  display: flex;
+  width: 100%;
+  background-color: var(--Very-Dark-Desaturated-Blue-dark);
+  height: 2.9rem;
+  padding: 0.2rem;
+  border-radius: 0.4rem;
+  transition: .5s;
+}
+
+.input{
+  width: 100%;
+  border: none;
+  background-color: white;
+  height: 100%;
+  transition: .5s;
+  padding: 0;
+  font-family: normal;
+  font-size: large;
+}
+
+input[type=text]:focus{
+  border: none;
+  outline: none;
+}
+
+.input-dark{
+  width: 100%;
+  border: none;
+  background-color: var(--Very-Dark-Desaturated-Blue-dark);
+  transition: .5s;
+  height: 100%;
+  padding: 0;
+  font-family: normal;
+  color: var(--Light-Grayish-Blue-light);
+  cursor: var(--Very-Dark-Blue-dark);
+  font-size: large;
+}
+
+
+.check{
+  background: none;
+  border: none;
+  transition: .5s;
+}
+
+.check-dark{
+  background-color: var(--Very-Dark-Desaturated-Blue-dark);
+  border: none;
+  transition: .5s;
+}
+
+.check:hover{
+  cursor: pointer;
+  color: var(--Check-Background);
+}
+
+.check-dark:hover{
+  cursor: pointer;
+}
+
+.delete-btn{
+  background: none;
+  border: none;
+}
+
+.delete-btn:hover{
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+     .nav-light{
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+     }
+
+     .nav-dark {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+     }
+
+     .todo{
+      width: 90%;
+      top: 6.2rem;
+     }
+
+     .item{
+      height: 5rem;
+     }
+
+     .itemsb{
+      height: 3rem;
+     }
+}
